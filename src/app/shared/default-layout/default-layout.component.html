@@ -1,0 +1,90 @@
+<div class="min-h-screen bg-slate-100">
+  <div class="bg-white w-full flex flex-col">
+    <div class="container mx-auto flex justify-between">
+      <div class="w-full flex justify-between items-center py-2">
+        <a routerLink="/">
+          <img src="/assets/logo.jpg" alt="logo" class="h-16">
+        </a>
+
+        <div class="flex items-center gap-x-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="text-gray-500 w-8 h-8" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
+            <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+          </svg>
+
+          <div class="flex items-center gap-x-4">
+            <span class="h-10 w-10 rounded-full bg-gray-500"></span>
+            <div>
+              <h3 class="text-sm font-medium">User Name Here</h3>
+              <p class="text-sm">Role</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container mx-auto flex items-center gap-x-8 py-4">
+        <a routerLink="/" class="flex items-center gap-x-2 hover:text-blue-900 hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M4 4h6v8H4zM4 16h6v4H4zM14 12h6v8h-6zM14 4h6v4h-6z"/>
+          </svg>
+
+          <span class="text-sm">Dashboard</span>
+        </a>
+
+        <a routerLink="/assets" class="flex items-center gap-x-2 hover:text-blue-900 hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-4 h-4" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M3 15a6 6 0 1 0 12 0 6 6 0 1 0-12 0"/>
+            <path d="M7 15a2 2 0 1 0 4 0 2 2 0 1 0-4 0M17 5a2 2 0 1 0 4 0 2 2 0 1 0-4 0M14.218 17.975l6.619-12.174M6.079 9.756l12.217-6.631"/>
+            <path d="M7 15a2 2 0 1 0 4 0 2 2 0 1 0-4 0"/>
+          </svg>
+
+          <span class="text-sm">Assets</span>
+        </a>
+
+        <a routerLink="/maintenance" class="flex items-center gap-x-2 hover:text-blue-900 hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-4 h-4" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37 1 .608 2.296.07 2.572-1.065z"/>
+            <path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/>
+          </svg>
+          <span class="text-sm">Maintenance</span>
+        </a>
+        <div class="group flex items-center gap-x-2 relative cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-4 h-4" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M7 10h3V7L6.5 3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1-3 3l-6-6a6 6 0 0 1-8-8L7 10"/>
+          </svg>
+          <span class="text-sm">Workshop</span>
+
+          <div class="bg-white rounded hidden group-hover:absolute top-10 left-0 group-hover:flex group-hover:flex-col">
+            <a routerLink="/workshop" class="flex items-center gap-x-2 hover:text-blue-900 hover:underline p-4 pr-14">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-4 h-4" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <path d="M7 10h3V7L6.5 3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1-3 3l-6-6a6 6 0 0 1-8-8L7 10"/>
+              </svg>
+
+              <span class="text-sm">Workshop</span>
+            </a>
+
+            <a routerLink="/technicians" class="flex items-center gap-x-2 hover:text-blue-900 hover:underline p-4 pr-14">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-4 h-4" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <path d="M10 13a2 2 0 1 0 4 0 2 2 0 0 0-4 0M8 21v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1M15 5a2 2 0 1 0 4 0 2 2 0 0 0-4 0M17 10h2a2 2 0 0 1 2 2v1M5 5a2 2 0 1 0 4 0 2 2 0 0 0-4 0M3 13v-1a2 2 0 0 1 2-2h2"/>
+              </svg>
+
+              <span class="text-sm">Technicians</span>
+            </a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="mt-6 container mx-auto">
+    <h3 class="font-medium">Page Title Here</h3>
+  </div>
+</div>
