@@ -1,0 +1,31 @@
+<table class="w-full border-b-2">
+  <thead class="font-bold bg-gray-200">
+    <tr>
+      <th *ngFor="let column of headers" class="py-4 text-left first:pl-4">{{column}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-content></ng-content>
+  </tbody>
+</table>
+
+<div class="flex justify-between items-center p-4">
+  <span>{{totalItems}} Results</span>
+
+  <div class="flex items-center justify-center gap-x-6">
+    <button class="p-2 bg-blue-800  text-white rounded">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="m15 6-6 6 6 6"/>
+      </svg>
+    </button>
+    <span>{{page}}</span>
+    <button class="p-2 bg-blue-800  text-white rounded">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="m9 6 6 6-6 6"/>
+      </svg>
+
+    </button>
+  </div>
+</div>

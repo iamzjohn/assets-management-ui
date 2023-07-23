@@ -10,6 +10,10 @@ import { AssetsComponent } from './assets/assets.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { WorkshopComponent } from './workshop/workshop.component';
 import { TechniciansComponent } from './technicians/technicians.component';
+import {SearchInputComponent} from "./shared/search-input/search-input.component";
+import {SearchableInputComponent} from "./shared/searchable-input/searchable-input.component";
+import {TableComponent} from "./shared/table/table.component";
+import {AssetStatusComponent} from "./assets/asset-status/asset-status.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { TechniciansComponent } from './technicians/technicians.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DefaultLayoutComponent
+    DefaultLayoutComponent,
+    SearchInputComponent,
+    SearchableInputComponent,
+    TableComponent,
+    AssetStatusComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
