@@ -1,6 +1,6 @@
 <div class="min-h-screen bg-slate-100 text-gray-800">
   <div class="bg-white w-full flex flex-col">
-    <div class="container mx-auto flex justify-between">
+    <div class="container px-4 mx-auto flex justify-between">
       <div class="w-full flex justify-between items-center py-2">
         <a routerLink="/">
           <img src="/assets/logo.jpg" alt="logo" class="h-16">
@@ -25,7 +25,7 @@
       </div>
     </div>
     <hr>
-    <div class="container mx-auto flex items-center gap-x-8 py-4">
+    <div class="container px-4 mx-auto flex items-center gap-x-8 py-4">
         <a routerLink="/" routerLinkActive="text-blue-900" [routerLinkActiveOptions]="{exact: true}" class="flex items-center gap-x-2 hover:text-blue-900 hover:underline">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
             <path stroke="none" d="M0 0h24v24H0z"/>
@@ -87,7 +87,7 @@
     </div>
   </div>
 
-  <div class="mt-8 container mx-auto">
+  <div class="mt-8 container px-4 mx-auto">
     <h1 class="font-medium text-sm">{{title}}</h1>
     <div class="mt-6">
       <ng-content></ng-content>
