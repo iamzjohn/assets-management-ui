@@ -11,4 +11,9 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 })
 export class DefaultLayoutComponent {
   @Input() title: string = '';
+  showWorkshopMenu: boolean = false;
+
+  toggleWorkshopMenu() {
+    this.showWorkshopMenu = !this.showWorkshopMenu;
+  }
 }
