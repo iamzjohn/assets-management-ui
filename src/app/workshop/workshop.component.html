@@ -1,3 +1,107 @@
 <app-default-layout title="Workshops">
+  <div class="bg-white rounded-lg">
+    <div class="flex w-full gap-x-4 p-4 border-dashed border-b">
+      <app-search-input ngClass="w-8/12" name="search-input" placeholder="Search for ID or Asset name" />
+      <app-date-input ngClass="w-3/12" />
+      <button class="w-1/12 flex items-center justify-center p-2 rounded bg-yellow-400">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="h-6 w-6" viewBox="0 0 24 24">
+          <path stroke="none" d="M0 0h24v24H0z"/>
+          <path d="M12 6a2 2 0 1 0 4 0 2 2 0 1 0-4 0M4 6h8M16 6h4M6 12a2 2 0 1 0 4 0 2 2 0 1 0-4 0M4 12h2M10 12h10M15 18a2 2 0 1 0 4 0 2 2 0 1 0-4 0M4 18h11M19 18h1"/>
+        </svg>
+        <span class="ml-2">Filter</span>
+      </button>
+    </div>
 
+    <div class="flex items-center mt-8">
+      <button class="px-4 py-2">All</button>
+      <button class="px-4 py-2 border-b-2 bg-blue-50 text-blue-900 border-blue-900">In Maintenance</button>
+      <button class="px-4 py-2">Done</button>
+    </div>
+    <app-table [headers]="['ID', 'Asset Name', 'Model', 'Maintenance Date', 'Issue', 'Status', '']" [page]="1" [totalItems]="3">
+      <tr class="border-b">
+        <td class="pl-4">1</td>
+        <td>
+          <div class="flex items-center gap-x-2 py-2">
+            <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
+            <div>
+              <h3 class="font-medium">Forklift</h3>
+              <p class="text-gray-500">Manufacturer: Toyota</p>
+            </div>
+          </div>
+        </td>
+        <td>FG25</td>
+        <td>12-12-2023</td>
+        <td>Engine</td>
+        <td class="px-4 w-72">
+          <app-asset-status status="danger">
+            In Maintenance
+          </app-asset-status>
+        </td>
+        <td class="pr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+               stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+            <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+          </svg>
+        </td>
+      </tr>
+      <tr class="border-b">
+        <td class="pl-4">2</td>
+        <td>
+          <div class="flex items-center gap-x-2 py-2">
+            <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
+            <div>
+              <h3 class="font-medium">Payloader</h3>
+              <p class="text-gray-500">Manufacturer: Caterpillar</p>
+            </div>
+          </div>
+        </td>
+        <td>950H</td>
+        <td>12-12-2023</td>
+        <td>Brakes</td>
+        <td class="px-4">
+          <app-asset-status status="danger">
+            In Maintenance
+          </app-asset-status>
+        </td>
+        <td class="pr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+               stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+            <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+          </svg>
+        </td>
+      </tr>
+      <tr class="border-b">
+        <td class="pl-4">3</td>
+        <td>
+          <div class="flex items-center gap-x-2 py-2">
+            <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
+            <div>
+              <h3 class="font-medium">Tractor/Tug Master</h3>
+              <p class="text-gray-500">Manufacturer: Karmar</p>
+            </div>
+          </div>
+        </td>
+        <td>TT612</td>
+        <td>12-12-2023</td>
+        <td>Oil</td>
+        <td class="px-4">
+          <app-asset-status status="danger">
+            In Maintenance
+          </app-asset-status>
+        </td>
+        <td class="pr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+               stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+            <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+          </svg>
+        </td>
+      </tr>
+    </app-table>
+  </div>
 </app-default-layout>

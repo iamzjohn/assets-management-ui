@@ -14,6 +14,7 @@ import {SearchInputComponent} from "./shared/search-input/search-input.component
 import {SearchableInputComponent} from "./shared/searchable-input/searchable-input.component";
 import {TableComponent} from "./shared/table/table.component";
 import {AssetStatusComponent} from "./assets/asset-status/asset-status.component";
+import {DateInputComponent} from "./shared/date-input/date-input.component";
 
 @NgModule({
   declarations: [
@@ -25,15 +26,16 @@ import {AssetStatusComponent} from "./assets/asset-status/asset-status.component
     WorkshopComponent,
     TechniciansComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    DefaultLayoutComponent,
-    SearchInputComponent,
-    SearchableInputComponent,
-    TableComponent,
-    AssetStatusComponent
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        DefaultLayoutComponent,
+        SearchInputComponent,
+        SearchableInputComponent,
+        TableComponent,
+        AssetStatusComponent,
+        DateInputComponent
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
