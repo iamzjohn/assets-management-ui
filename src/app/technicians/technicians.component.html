@@ -1,3 +1,186 @@
 <app-default-layout title="Technicians">
+  <div class="grid grid-cols-5 gap-x-6">
+    <div class="bg-white rounded-lg">
+      <div class="p-4">
+        <div class="flex items-center justify-between">
+          <h3 class="font-medium text-base">Filters</h3>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path
+                d="M4 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M18 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+            </svg>
+          </button>
+        </div>
 
+        <div class="mt-4 w-full flex flex-wrap items-center gap-x-2 text-sm">
+          <span class="flex items-center gap-x-2 p-2 bg-yellow-400 rounded">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                   stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <path d="M18 6 6 18M6 6l12 12"/>
+              </svg>
+            </button>
+            <span>Available</span>
+          </span>
+        </div>
+        <div class="mt-4">
+          <app-search-input class="mt-4" name="assets-search" placeholder="Find Technician"/>
+        </div>
+      </div>
+      <hr/>
+
+      <div class="p-4">
+        <app-searchable-input label="Technician Area" placeholder="Search"/>
+      </div>
+      <hr/>
+
+      <div class="p-4">
+        <h3 class="text-sm font-medium mb-4">
+          Status
+        </h3>
+        <div class="flex items-center gap-x-2">
+          <input type="checkbox" id="available" name="available" value="available">
+          <label for="available" class="text-sm">Available</label>
+        </div>
+        <div class="flex items-center gap-x-2 mt-2">
+          <input type="checkbox" id="busy" name="busy" value="busy">
+          <label for="busy" class="text-sm">Busy</label>
+        </div>
+        <div class="flex items-center gap-x-2 mt-2">
+          <input type="checkbox" id="not_available" name="not_available" value="not_available">
+          <label for="not_available" class="text-sm">Not Available</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-4 bg-white rounded-lg">
+      <div class="flex justify-end p-4">
+        <button class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+               stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+
+          <span>Add Technician</span>
+        </button>
+      </div>
+      <app-table [headers]="['#', 'Technician Name', 'Phone Number', 'Salary per Hour', 'Status', '']" [page]="1"
+                 [totalItems]="4">
+        <tr class="border-b">
+          <td class="pl-4">1</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded-full h-16 w-16 object-cover"/>
+              <div>
+                <h3 class="font-medium">Alberto Jr</h3>
+                <p class="text-gray-500">Area: Auto Mechanic</p>
+              </div>
+            </div>
+          </td>
+          <td>+258 80 0000 000</td>
+          <td>2.3000,00 MZN</td>
+          <td class="px-4">
+            <app-asset-status status="success">
+              Avaliable
+            </app-asset-status>
+          </td>
+          <td class="pr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
+        </tr>
+        <tr class="border-b">
+          <td class="pl-4">2</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded-full h-16 w-16 object-cover"/>
+              <div>
+                <h3 class="font-medium">Carlos Joaquim</h3>
+                <p class="text-gray-500">Area: Auto Mechanic</p>
+              </div>
+            </div>
+          </td>
+          <td>+258 80 0000 000</td>
+          <td>2.3000,00 MZN</td>
+          <td class="px-4">
+            <app-asset-status status="success">
+              Avaliable
+            </app-asset-status>
+          </td>
+          <td class="pr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
+        </tr>
+        <tr class="border-b">
+          <td class="pl-4">3</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded-full h-16 w-16 object-cover"/>
+              <div>
+                <h3 class="font-medium">Franca Francisco</h3>
+                <p class="text-gray-500">Area: Auto Mechanic</p>
+              </div>
+            </div>
+          </td>
+          <td>+258 80 0000 000</td>
+          <td>2.3000,00 MZN</td>
+          <td class="px-4">
+            <app-asset-status status="success">
+              Avaliable
+            </app-asset-status>
+          </td>
+          <td class="pr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
+        </tr>
+        <tr class="border-b">
+          <td class="pl-4">4</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded-full h-16 w-16 object-cover"/>
+              <div>
+                <h3 class="font-medium">Vicente Batista</h3>
+                <p class="text-gray-500">Area: Auto Mechanic</p>
+              </div>
+            </div>
+          </td>
+          <td>+258 80 0000 000</td>
+          <td>2.3000,00 MZN</td>
+          <td class="px-4">
+            <app-asset-status status="success">
+              Avaliable
+            </app-asset-status>
+          </td>
+          <td class="pr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
+        </tr>
+      </app-table>
+    </div>
+
+
+  </div>
 </app-default-layout>

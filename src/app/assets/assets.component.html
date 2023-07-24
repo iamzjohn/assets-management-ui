@@ -37,16 +37,16 @@
         </span>
         </div>
         <div class="mt-4">
-          <app-search-input class="mt-4" name="assets-search" placeholder="Find Asset" />
+          <app-search-input class="mt-4" name="assets-search" placeholder="Find Asset"/>
         </div>
       </div>
       <hr/>
       <div class="p-4">
-        <app-searchable-input label="Manufacturer" placeholder="Search Manufacturer" />
+        <app-searchable-input label="Manufacturer" placeholder="Search Manufacturer"/>
       </div>
       <hr/>
       <div class="p-4">
-        <app-searchable-input label="Model" placeholder="Search Model" />
+        <app-searchable-input label="Model" placeholder="Search Model"/>
       </div>
       <hr/>
       <div class="p-4">
@@ -66,14 +66,12 @@
           <label for="maintenance" class="text-sm">In Maintenance</label>
         </div>
       </div>
-
-
-
     </div>
     <div class="col-span-4 bg-white rounded-lg">
       <div class="flex justify-end p-4">
         <button class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+               stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
             <path stroke="none" d="M0 0h24v24H0z"/>
             <path d="M12 5v14M5 12h14"/>
           </svg>
@@ -81,91 +79,92 @@
           <span>Add Asset</span>
         </button>
       </div>
-      <div>
-        <app-table [headers]="['#', 'Name', 'Model', 'Capacity', 'Location', 'Status', '']" [page]="1" [totalItems]="7">
-          <tr class="border-b">
-            <td class="pl-4">1</td>
-            <td>
-              <div class="flex items-center gap-x-2 py-2">
-                <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover" />
-                <div>
-                  <h3 class="font-medium">Forklift</h3>
-                  <p class="text-gray-500">Manufacturer: Toyota</p>
-                </div>
+      <app-table [headers]="['#', 'Name', 'Model', 'Capacity', 'Location', 'Status', '']" [page]="1" [totalItems]="7">
+        <tr class="border-b">
+          <td class="pl-4">1</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
+              <div>
+                <h3 class="font-medium">Forklift</h3>
+                <p class="text-gray-500">Manufacturer: Toyota</p>
               </div>
-            </td>
-            <td>FG25</td>
-            <td>500 lbs</td>
-            <td>Warehouse A</td>
-            <td class="px-4">
-              <app-asset-status status="in_storage">
-                In Storage
-              </app-asset-status>
-            </td>
-            <td class="pr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                <path stroke="none" d="M0 0h24v24H0z"/>
-                <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
-                <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
-              </svg>
-            </td>
-          </tr>
-          <tr class="border-b">
-            <td class="pl-4">2</td>
-            <td>
-              <div class="flex items-center gap-x-2 py-2">
-                <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover" />
-                <div>
-                  <h3 class="font-medium">Payloader</h3>
-                  <p class="text-gray-500">Manufacturer: Caterpillar</p>
-                </div>
+            </div>
+          </td>
+          <td>FG25</td>
+          <td>500 lbs</td>
+          <td>Warehouse A</td>
+          <td class="px-4">
+            <app-asset-status status="success">
+              In Storage
+            </app-asset-status>
+          </td>
+          <td class="pr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
+        </tr>
+        <tr class="border-b">
+          <td class="pl-4">2</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
+              <div>
+                <h3 class="font-medium">Payloader</h3>
+                <p class="text-gray-500">Manufacturer: Caterpillar</p>
               </div>
-            </td>
-            <td>950H</td>
-            <td>3.5 cubic yards</td>
-            <td>Yard B</td>
-            <td class="px-4">
-              <app-asset-status status="in_use">
-                In Use
-              </app-asset-status>
-            </td>
-            <td class="pr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                <path stroke="none" d="M0 0h24v24H0z"/>
-                <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
-                <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
-              </svg>
-            </td>
-          </tr>
-          <tr class="border-b">
-            <td class="pl-4">3</td>
-            <td>
-              <div class="flex items-center gap-x-2 py-2">
-                <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover" />
-                <div>
-                  <h3 class="font-medium">Tractor/Tug Master</h3>
-                  <p class="text-gray-500">Manufacturer: Karmar</p>
-                </div>
+            </div>
+          </td>
+          <td>950H</td>
+          <td>3.5 cubic yards</td>
+          <td>Yard B</td>
+          <td class="px-4">
+            <app-asset-status status="warning">
+              In Use
+            </app-asset-status>
+          </td>
+          <td class="pr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
+        </tr>
+        <tr class="border-b">
+          <td class="pl-4">3</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
+              <div>
+                <h3 class="font-medium">Tractor/Tug Master</h3>
+                <p class="text-gray-500">Manufacturer: Karmar</p>
               </div>
-            </td>
-            <td>TT612</td>
-            <td>-</td>
-            <td>Terminal C</td>
-            <td class="px-4">
-              <app-asset-status status="in_maintenance">
-                In Maintenance
-              </app-asset-status>
-            </td>
-            <td class="pr-4">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                <path stroke="none" d="M0 0h24v24H0z"/>
-                <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
-                <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
-              </svg>
-            </td>
-          </tr>
-        </app-table>
-      </div>
+            </div>
+          </td>
+          <td>TT612</td>
+          <td>-</td>
+          <td>Terminal C</td>
+          <td class="px-4">
+            <app-asset-status status="danger">
+              In Maintenance
+            </app-asset-status>
+          </td>
+          <td class="pr-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
+            </svg>
+          </td>
+        </tr>
+      </app-table>
     </div>
   </div>
 </app-default-layout>
