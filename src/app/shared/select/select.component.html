@@ -1,0 +1,7 @@
+<label for="{{name}}">
+  {{label}}
+</label>
+<select name="{{name}}" id="{{name}}" class="mt-2 w-full rounded border border-gray-300 p-2 focus:ring-0">
+  <option *ngIf="!!placeholder" value="" disabled>{{placeholder}}</option>
+  <option *ngFor="let option of options" [value]="option.value">{{option.label}}</option>
+</select>

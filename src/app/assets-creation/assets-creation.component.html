@@ -1,0 +1,54 @@
+<app-default-layout title="Register Asset">
+  <div class="grid grid-cols-5 gap-x-6">
+    <div class="col-span-4">
+      <div class="mb-4">
+        <app-card>
+          <app-asset-creation-form/>
+        </app-card>
+      </div>
+
+
+      <div class="mb-4">
+        <app-card title="Warranty Information">
+          <app-asset-warranty-form/>
+        </app-card>
+      </div>
+
+      <div class="w-full flex justify-end">
+        <a routerLink="/assets" class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
+          Submit
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="mb-4">
+        <app-card title="Visibility">
+          <div>
+            <app-select label="Visibility" [options]="visibilityOptions"></app-select>
+          </div>
+          <div class="mt-4">
+            <app-input label="Category"/>
+          </div>
+        </app-card>
+      </div>
+      <div class="mb-4">
+        <app-card title="Manual and Documents">
+          <p class="text-sm mb-4 text-gray-500">No Manual uploaded</p>
+          <button class="flex flex-grow-0 items-center rounded bg-blue-900 text-white px-4 py-2 relative">
+            Upload Manuals
+            <input type="file" class="w-full h-full absolute opacity-0 cursor-pointer" />
+          </button>
+        </app-card>
+      </div>
+      <div class="mb-4">
+        <app-card title="Maintenance Plan">
+          <p class="text-sm mb-4 text-gray-500">No maintenance plan added</p>
+          <button class="flex flex-grow-0 items-center rounded bg-blue-900 text-white px-4 py-2 relative">
+            Add Plan
+            <input type="file" class="w-full h-full absolute opacity-0 cursor-pointer" />
+          </button>
+        </app-card>
+      </div>
+    </div>
+  </div>
+</app-default-layout>

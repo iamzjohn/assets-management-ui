@@ -6,6 +6,7 @@ import {AssetsComponent} from "./assets/assets.component";
 import {MaintenanceComponent} from "./maintenance/maintenance.component";
 import {WorkshopComponent} from "./workshop/workshop.component";
 import {TechniciansComponent} from "./technicians/technicians.component";
+import {AssetsCreationComponent} from "./assets-creation/assets-creation.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
     path: 'assets',
     title: 'Assets',
     component: AssetsComponent
+  },
+  {
+    path: 'assets/register',
+    title: 'Register Asset',
+    component: AssetsCreationComponent
   },
   {
     path: 'maintenance',

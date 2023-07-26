@@ -15,6 +15,12 @@ import {SearchableInputComponent} from "./shared/searchable-input/searchable-inp
 import {TableComponent} from "./shared/table/table.component";
 import {AssetStatusComponent} from "./assets/asset-status/asset-status.component";
 import {DateInputComponent} from "./shared/date-input/date-input.component";
+import { AssetsCreationComponent } from './assets-creation/assets-creation.component';
+import {CardComponent} from "./shared/card/card.component";
+import {AssetCreationFormComponent} from "./shared/assets/creation-form/creation-form.component";
+import {AssetWarrantyFormComponent} from "./shared/assets/asset-warranty-form/asset-warranty-form.component";
+import {SelectComponent} from "./shared/select/select.component";
+import {InputComponent} from "./shared/input/input.component";
 
 @NgModule({
   declarations: [
@@ -25,17 +31,23 @@ import {DateInputComponent} from "./shared/date-input/date-input.component";
     MaintenanceComponent,
     WorkshopComponent,
     TechniciansComponent,
+    AssetsCreationComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        DefaultLayoutComponent,
-        SearchInputComponent,
-        SearchableInputComponent,
-        TableComponent,
-        AssetStatusComponent,
-        DateInputComponent
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    DefaultLayoutComponent,
+    SearchInputComponent,
+    SearchableInputComponent,
+    TableComponent,
+    AssetStatusComponent,
+    DateInputComponent,
+    CardComponent,
+    AssetCreationFormComponent,
+    AssetWarrantyFormComponent,
+    SelectComponent,
+    InputComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
