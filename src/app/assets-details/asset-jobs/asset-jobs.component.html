@@ -1,1 +1,202 @@
-<p>asset-jobs works!</p>
+<div class="flex items-center gap-x-4 mb-6">
+  <div class="flex justify-end">
+    <a routerLink="/assets/register" class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+           stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      <span>Add Task</span>
+    </a>
+  </div>
+  <div class="flex justify-end">
+    <a routerLink="/assets/register" class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="M4 18a2 2 0 1 0 4 0 2 2 0 1 0-4 0M4 6a2 2 0 1 0 4 0 2 2 0 1 0-4 0M16 18a2 2 0 1 0 4 0 2 2 0 1 0-4 0M6 8v8"/>
+        <path d="M11 6h5a2 2 0 0 1 2 2v8"/>
+        <path d="m14 9-3-3 3-3"/>
+      </svg>
+      <span>Request Equipment</span>
+    </a>
+  </div>
+</div>
+
+<app-tabs (onSelectTab)="setActiveTab($event)"  [tabs]="['Tasks', 'Requested Equipment']">
+  <div [ngSwitch]="activeTab">
+    <div class="w-full flex flex-col gap-y-2" *ngSwitchCase="'Tasks'">
+      <app-collapsible-card title="#1 Diagnosis" duration="50min">
+        <div>
+          <h3 class="font-medium text-sm">
+            Description
+          </h3>
+          <p class="text-gray-500">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci alias aliquid amet
+          </p>
+        </div>
+
+        <div class="mt-1 w-full flex justify-between items-center bg-white p-2 pt-4">
+          <div class="flex items-center gap-x-2 py-2 text-sm">
+            <img src="https://placehold.co/600x400" alt="Machine" class="border rounded-full h-14 w-14 object-cover"/>
+            <div>
+              <h3 class="font-medium">Forklift</h3>
+              <p class="text-gray-500">Manufacturer: Toyota</p>
+            </div>
+          </div>
+          <div class="text-gray-500">
+            <div class="text-xs">12-06-2023</div>
+            <div class="text-sm text-right">50 min</div>
+          </div>
+        </div>
+
+        <div class="text-sm mt-1">
+          <div class="grid grid-cols-5 bg-white p-2 pt-4 border-b font-semibold">
+            <span class="col-span-3">Used equipment</span>
+            <span>Unit</span>
+            <span>Price</span>
+          </div>
+          <div class="grid grid-cols-5 p-2 pt-4 border-b">
+            <span class="col-span-3">Technician</span>
+            <span>-</span>
+            <span>4.450,00 MZN</span>
+          </div>
+          <div class="grid grid-cols-5 p-2 pt-4 border-b">
+            <span class="col-span-3">Breaks</span>
+            <span>1</span>
+            <span>6.000,00 MZN</span>
+          </div>
+          <div class="grid grid-cols-5 p-2 pt-4 border-b">
+            <span class="col-span-3">Oil</span>
+            <span>1</span>
+            <span>1.000,00 MZN</span>
+          </div>
+          <div class="grid grid-cols-5 p-2 pt-4 border-b">
+            <span class="col-span-3"></span>
+            <span class="bg-white py-2">Total</span>
+            <span class="bg-white py-2">7.000,00 MZN</span>
+          </div>
+        </div>
+      </app-collapsible-card>
+      <app-collapsible-card title="#2 Change Breaks" duration="50min">
+        <div>
+          <h3 class="font-medium text-sm">
+            Description
+          </h3>
+          <p class="text-gray-500">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci alias aliquid amet
+          </p>
+        </div>
+
+        <div class="mt-1 w-full flex justify-between items-center bg-white p-2 pt-4">
+          <div class="flex items-center gap-x-2 py-2 text-sm">
+            <img src="https://placehold.co/600x400" alt="Machine" class="border rounded-full h-14 w-14 object-cover"/>
+            <div>
+              <h3 class="font-medium">Forklift</h3>
+              <p class="text-gray-500">Manufacturer: Toyota</p>
+            </div>
+          </div>
+          <div class="text-gray-500">
+            <div class="text-xs">12-06-2023</div>
+            <div class="text-sm text-right">50 min</div>
+          </div>
+        </div>
+
+        <div class="text-sm mt-1">
+          <div class="grid grid-cols-5 bg-white p-2 pt-4 border-b font-semibold">
+            <span class="col-span-3">Used equipment</span>
+            <span>Unit</span>
+            <span>Price</span>
+          </div>
+          <div class="grid grid-cols-5 p-2 pt-4 border-b">
+            <span class="col-span-3">Technician</span>
+            <span>-</span>
+            <span>4.450,00 MZN</span>
+          </div>
+          <div class="grid grid-cols-5 p-2 pt-4 border-b">
+            <span class="col-span-3">Breaks</span>
+            <span>1</span>
+            <span>6.000,00 MZN</span>
+          </div>
+          <div class="grid grid-cols-5 p-2 pt-4 border-b">
+            <span class="col-span-3">Oil</span>
+            <span>1</span>
+            <span>1.000,00 MZN</span>
+          </div>
+          <div class="grid grid-cols-5 p-2 pt-4 border-b">
+            <span class="col-span-3"></span>
+            <span class="bg-white py-2">Total</span>
+            <span class="bg-white py-2">7.000,00 MZN</span>
+          </div>
+        </div>
+      </app-collapsible-card>
+    </div>
+    <div *ngSwitchCase="'Requested Equipment'">
+      <app-table [headers]="['ID', 'Equipment Name', 'Technician', 'Date', 'Unit', 'Unit Cost', 'Cost', '']">
+        <tr class="border-b">
+          <td>1</td>
+          <td>Equipment Name</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded-full h-14 w-14 object-cover"/>
+              <div>
+                <h3 class="font-medium text-sm">Alberto Jr</h3>
+                <p class="text-gray-500 text-sm">Area: Auto Mechanic</p>
+              </div>
+            </div>
+          </td>
+          <td>12-06-2023 </td>
+          <td>
+           200.000,00 MZN
+          </td>
+          <td>
+           600.000,00 MZN
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 5a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+            </svg>
+          </td>
+        </tr>
+        <tr class="border-b">
+          <td>2</td>
+          <td>Equipment Name</td>
+          <td>
+            <div class="flex items-center gap-x-2 py-2">
+              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded-full h-14 w-14 object-cover"/>
+              <div>
+                <h3 class="font-medium text-sm">Alberto Jr</h3>
+                <p class="text-gray-500 text-sm">Area: Auto Mechanic</p>
+              </div>
+            </div>
+          </td>
+          <td>12-06-2023 </td>
+          <td>
+           200.000,00 MZN
+          </td>
+          <td>
+           600.000,00 MZN
+          </td>
+          <td>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-6 h-6" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path d="M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 5a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+            </svg>
+          </td>
+        </tr>
+        <tr class="border-b bg-blue-50">
+          <td colspan="5"></td>
+          <td colspan="2" class="font-semibold py-1">
+           Total Cost
+          </td>
+        </tr>
+        <tr class="">
+          <td colspan="5"></td>
+          <td colspan="2" class="py-2">
+            1.200.000,00 MZN
+          </td>
+        </tr>
+      </app-table>
+    </div>
+  </div>
+</app-tabs>

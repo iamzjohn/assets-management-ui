@@ -1,0 +1,17 @@
+<div class="w-full rounded bg-blue-50 p-4">
+  <button (click)="toggleOpen()" class="w-full flex justify-between items-center pb-2">
+    <h2 class="text-base">{{title}}</h2>
+    <div class="flex gap-x-4 items-center">
+      <span>{{duration}}</span>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" [ngClass]="{'rotate-180': isOpen}"  viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="m6 9 6 6 6-6"/>
+      </svg>
+    </div>
+  </button>
+  <div class="overflow-hidden" [ngClass]="{'h-0': !isOpen, 'h-auto': isOpen}">
+    <div class="pt-2 border-t">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
