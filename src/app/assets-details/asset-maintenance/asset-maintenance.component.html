@@ -1,1 +1,50 @@
-<p>asset-maintenance works!</p>
+<div class="flex w-full justify-between items-center mb-6">
+  <h3 class="font-medium text-sm">Maintenance History</h3>
+
+  <div class="flex gap-x-2 items-center justify-center">
+    <button class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">Schedule Maintenance</button>
+    <button class="flex items-center rounded bg-blue-50 text-gray-500 px-4 py-2 gap-x-2">Maintenance Plan</button>
+  </div>
+</div>
+
+<app-table [headers]="['#', 'Issue', 'Maintenance Type', 'Date', 'Status', '']">
+  <tr class="border-b">
+    <td>1</td>
+    <td>Breaks</td>
+    <td>Corrective</td>
+    <td>12-10-2022</td>
+    <td><app-asset-status status="success">Success</app-asset-status></td>
+    <td class="py-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-6 h-6" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 5a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+      </svg>
+    </td>
+  </tr>
+  <tr class="border-b">
+    <td>2</td>
+    <td>Mechanical Issue</td>
+    <td>Corrective</td>
+    <td>12-10-2022</td>
+    <td><app-asset-status status="success">Success</app-asset-status></td>
+    <td class="py-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-6 h-6" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 5a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+      </svg>
+    </td>
+  </tr>
+  <tr class="border-b">
+    <td>3</td>
+    <td>Preventive Maintenance</td>
+    <td>Corrective</td>
+    <td>12-10-2022</td>
+    <td><app-asset-status status="success">Success</app-asset-status></td>
+    <td class="py-4">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-6 h-6" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 19a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 5a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+      </svg>
+    </td>
+  </tr>
+</app-table>
