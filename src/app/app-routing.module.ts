@@ -16,12 +16,12 @@ import {AssetJobsComponent} from "./assets-details/asset-jobs/asset-jobs.compone
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     title: 'Login',
     component: LoginComponent,
   },
   {
-    path: '',
+    path: 'dashboard',
     title: 'Dashboard',
     component: DashboardComponent
   },
