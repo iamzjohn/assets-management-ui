@@ -21,6 +21,7 @@ import {AssetCreationFormComponent} from "./shared/assets/creation-form/creation
 import {AssetWarrantyFormComponent} from "./shared/assets/asset-warranty-form/asset-warranty-form.component";
 import {SelectComponent} from "./shared/select/select.component";
 import {InputComponent} from "./shared/input/input.component";
+import { AssetsDetailsComponent } from './assets-details/assets-details.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {InputComponent} from "./shared/input/input.component";
     WorkshopComponent,
     TechniciansComponent,
     AssetsCreationComponent,
+    AssetsDetailsComponent,
   ],
   imports: [
     BrowserModule,

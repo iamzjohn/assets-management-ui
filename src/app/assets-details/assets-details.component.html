@@ -1,0 +1,43 @@
+<app-default-layout title="Asset Details">
+  <app-card>
+    <div class="grid grid-cols-5 gap-x-8">
+      <div>
+        <img src="https://placehold.co/600x400" alt="Machine Details" class="border rounded h-80 w-full object-cover p-1"/>
+        <div class="flex flex-col mt-6 gap-y-2">
+          <a routerLink="../{{assetID}}/overview" routerLinkActive="bg-blue-900 text-white" class="flex items-center rounded bg-blue-50 text-gray-500 px-4 py-2 gap-x-2">
+            Overview
+          </a>
+          <a routerLink="../{{assetID}}/meters" routerLinkActive="bg-blue-900 text-white" class="flex items-center rounded bg-blue-50 text-gray-500 px-4 py-2 gap-x-2">
+            Machine Meters
+          </a>
+          <a routerLink="../{{assetID}}/maintenance" routerLinkActive="bg-blue-900 text-white" class="flex items-center rounded bg-blue-50 text-gray-500 px-4 py-2 gap-x-2">
+            Maintenance
+          </a>
+          <a routerLink="../{{assetID}}/activities" routerLinkActive="bg-blue-900 text-white" class="flex items-center rounded bg-blue-50 text-gray-500 px-4 py-2 gap-x-2">
+            Activities
+          </a>
+          <a routerLink="../{{assetID}}/jobs" routerLinkActive="bg-blue-900 text-white" class="flex items-center rounded bg-blue-50 text-gray-500 px-4 py-2 gap-x-2">
+            Job Card
+          </a>
+        </div>
+      </div>
+      <div class="col-span-4">
+        <div class="mb-6">
+          <p class="text-base font-semibold">
+            Forklift
+          </p>
+          <div class="flex items-center text-gray-600">
+            <span class="pr-4 text-sm border-r">
+              Manufacturer: Toyota
+            </span>
+            <span class="pl-4 text-sm">
+              Identifier: <span class="text-blue-900">X43U98E</span>
+            </span>
+          </div>
+        </div>
+
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </app-card>
+</app-default-layout>

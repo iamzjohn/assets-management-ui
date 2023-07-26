@@ -1,0 +1,140 @@
+<div>
+  <div class="grid grid-cols-4 gap-4">
+    <div class="w-full flex items-start border-dashed border rounded py-2 px-4 gap-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+           stroke-linejoin="round" stroke-width="1.5" class="w-4 h-4 text-gray-500 relative top-1" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="M3 15a6 6 0 1 0 12 0 6 6 0 1 0-12 0"/>
+        <path
+          d="M7 15a2 2 0 1 0 4 0 2 2 0 1 0-4 0M17 5a2 2 0 1 0 4 0 2 2 0 1 0-4 0M14.218 17.975l6.619-12.174M6.079 9.756l12.217-6.631"/>
+        <path d="M7 15a2 2 0 1 0 4 0 2 2 0 1 0-4 0"/>
+      </svg>
+      <div class="flex flex-col">
+        <span class="text-sm text-gray-500 mb-1">Asset Type:</span>
+        <span class="font-medium">Forklift GF25</span>
+      </div>
+    </div>
+
+    <div class="w-full flex items-start border-dashed border rounded py-2 px-4 gap-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+           stroke-linejoin="round" stroke-width="1.5" class="w-4 h-4 text-gray-500 relative top-1" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path
+          d="M8 7a4 4 0 1 0 8 0 4 4 0 1 0-8 0M2.5 17a4 4 0 1 0 8 0 4 4 0 1 0-8 0M13.5 17a4 4 0 1 0 8 0 4 4 0 1 0-8 0"/>
+      </svg>
+
+      <div class="flex flex-col">
+        <span class="text-sm text-gray-500 mb-1">Model:</span>
+        <span class="font-medium">GF25</span>
+      </div>
+    </div>
+
+    <div
+      class="w-full flex items-start border-dashed border border-green-600 text-green-600 bg-green-100 rounded py-2 px-4 gap-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+           stroke-linejoin="round" stroke-width="2" class="w-4 h-4 relative top-1" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0M12 9h.01"/>
+        <path d="M11 12h1v4h1"/>
+      </svg>
+      <div class="flex flex-col">
+        <span class="text-sm text-gray-500 mb-1">Activity Status:</span>
+        <span class="font-medium">In Storage</span>
+      </div>
+    </div>
+
+    <div
+      class="w-full flex items-start border-dashed border border-green-600 text-green-600 bg-green-100 rounded py-2 px-4 gap-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+           stroke-linejoin="round" stroke-width="2" class="w-4 h-4 relative top-1" viewBox="0 0 24 24">
+        <path stroke="none" d="M0 0h24v24H0z"/>
+        <path d="M7 10h3V7L6.5 3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1-3 3l-6-6a6 6 0 0 1-8-8L7 10"/>
+      </svg>
+
+      <div class="flex flex-col">
+        <span class="text-sm text-gray-500 mb-1">Maintenance Status:</span>
+        <span class="font-medium">Up to date</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 mt-6">
+    <div>
+      <h3 class="font-medium text-sm">Store Location:</h3>
+      <span class="text-gray-500 text-sm">Warehouse A</span>
+    </div>
+    <div>
+      <h3 class="font-medium text-sm">Owner:</h3>
+      <span class="text-gray-500 text-sm">Port Maputo</span>
+    </div>
+    <div>
+      <h3 class="font-medium text-sm">Next Preventive Maintenance:</h3>
+      <span class="text-gray-500 text-sm">Port Maputo</span>
+    </div>
+    <div class="col-span-2">
+      <h3 class="font-medium text-sm">Description:</h3>
+      <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur adipiscing elit. Ac ut consequat semper viverra nam libero. Aliquam nulla facilisi cras fermentum. Mauris sit amet massa vitae tortor. Dignissim sodales ut eu sem integer vitae justo.</span>
+    </div>
+  </div>
+
+  <hr class="my-6 border-dashed">
+  <app-tabs (onSelectTab)="setActiveTab($event)" [tabs]="['Assets Overview', 'Warranty Information', 'Manuals and Documents']">
+    <div class="text-gray-500" [ngSwitch]="activeTab">
+      <div class="flex w-full flex-col divide-y border-b" *ngSwitchCase="'Assets Overview'">
+        <div class="grid grid-cols-4 py-2">
+          <span>Manufacturer</span>
+          <span>Toyota</span>
+        </div>
+        <div class="grid grid-cols-4 py-2">
+          <span>Model</span>
+          <span>GF25</span>
+        </div>
+        <div class="grid grid-cols-4 py-2">
+          <span>Capacity</span>
+          <span>500lbs</span>
+        </div>
+        <div class="grid grid-cols-4 py-2">
+          <span>Color</span>
+          <span>Black</span>
+        </div>
+      </div>
+      <div class="flex w-full flex-col divide-y border-b" *ngSwitchCase="'Warranty Information'">
+        <div class="grid grid-cols-4 py-2">
+          <span>Purchase Date</span>
+          <span>12-06-2023</span>
+        </div>
+        <div class="grid grid-cols-4 py-2">
+          <span>Purchase Cost</span>
+          <span>43.540.000,00 MZN</span>
+        </div>
+        <div class="grid grid-cols-4 py-2">
+          <span>Current Value</span>
+          <span>22.540.000,00 MZN</span>
+        </div>
+        <div class="grid grid-cols-4 py-2">
+          <span>Depreciation</span>
+          <span>Black</span>
+        </div>
+        <div class="grid grid-cols-4 py-2">
+          <span>Warranty expiration date</span>
+          <span>12-06-2023</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-y-2" *ngSwitchCase="'Manuals and Documents'">
+        <div class="flex justify-between w-full border-l-2 bg-blue-50 rounded border-blue-900 px-4 py-3">
+          <span>User's Guide</span>
+          <a class="underline" href="#">View PDF</a>
+        </div>
+        <div class="flex justify-between w-full border-l-2 bg-blue-50 rounded border-blue-900 px-4 py-3">
+          <span>Setup and Specifications</span>
+          <a class="underline" href="#">View PDF</a>
+        </div>
+        <div class="flex justify-between w-full border-l-2 bg-blue-50 rounded border-blue-900 px-4 py-3">
+          <span>Service Manual</span>
+          <a class="underline" href="#">View PDF</a>
+        </div>
+      </div>
+    </div>
+  </app-tabs>
+
+</div>

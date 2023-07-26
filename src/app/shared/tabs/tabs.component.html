@@ -1,0 +1,5 @@
+<div class="flex items-center mt-8 text-gray-500 mb-6">
+  <button *ngFor="let tab of tabs" class="px-4 py-2" [ngClass]="{'border-b-2 bg-blue-50 text-blue-900 border-blue-900': tab === selectedTab}" (click)="selectTab(tab)" >{{tab}}</button>
+</div>
+<ng-content />
+

@@ -7,6 +7,12 @@ import {MaintenanceComponent} from "./maintenance/maintenance.component";
 import {WorkshopComponent} from "./workshop/workshop.component";
 import {TechniciansComponent} from "./technicians/technicians.component";
 import {AssetsCreationComponent} from "./assets-creation/assets-creation.component";
+import {AssetsDetailsComponent} from "./assets-details/assets-details.component";
+import {AssetOverviewComponent} from "./assets-details/asset-overview/asset-overview.component";
+import {AssetMetersComponent} from "./assets-details/asset-meters/asset-meters.component";
+import {AssetMaintenanceComponent} from "./assets-details/asset-maintenance/asset-maintenance.component";
+import {AssetActivitiesComponent} from "./assets-details/asset-activities/asset-activities.component";
+import {AssetJobsComponent} from "./assets-details/asset-jobs/asset-jobs.component";
 
 const routes: Routes = [
   {
@@ -28,6 +34,33 @@ const routes: Routes = [
     path: 'assets/register',
     title: 'Register Asset',
     component: AssetsCreationComponent
+  },
+  {
+    path: 'assets/:id',
+    title: 'Register Asset',
+    component: AssetsDetailsComponent,
+    children: [
+      {
+        path: 'overview',
+        component: AssetOverviewComponent
+      },
+      {
+        path: 'meters',
+        component: AssetMetersComponent
+      },
+      {
+        path: 'maintenance',
+        component: AssetMaintenanceComponent
+      },
+      {
+        path: 'activities',
+        component: AssetActivitiesComponent
+      },
+      {
+        path: 'jobs',
+        component: AssetJobsComponent
+      },
+    ]
   },
   {
     path: 'maintenance',
