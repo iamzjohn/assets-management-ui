@@ -1,3 +1,129 @@
 <app-default-layout title="Maintenance">
+  <div class="grid grid-cols-5 gap-x-6 pb-6">
+    <div class="w-full flex flex-col gap-y-2">
+      <h3 class="font-medium text-sm">
+        Upcoming Maintenances
+      </h3>
+      <app-card>
+        <div class="w-full flex justify-between items-center">
+          <span class="text-sm">
+            12-06-2023
+          </span>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path
+                d="M4 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M18 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex justify-between items-center mt-4">
+          <span class="text-sm font-medium">
+            Forklift FG25
+          </span>
+          <span class="text-xs text-gray-500">
+            Maintenance
+          </span>
+        </div>
+      </app-card>
+      <app-card>
+        <div class="w-full flex justify-between items-center">
+          <span class="text-sm">
+            12-06-2023
+          </span>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path
+                d="M4 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M18 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex justify-between items-center mt-4">
+          <span class="text-sm font-medium">
+            Skip Tippler 821
+          </span>
+          <span class="text-xs text-gray-500">
+            Maintenance
+          </span>
+        </div>
+      </app-card>
+      <app-card>
+        <div class="w-full flex justify-between items-center">
+          <span class="text-sm">
+            12-06-2023
+          </span>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                 stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <path
+                d="M4 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M11 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0M18 12a1 1 0 1 0 2 0 1 1 0 1 0-2 0"/>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex justify-between items-center mt-4">
+          <span class="text-sm font-medium">
+            Forklift FG25
+          </span>
+          <span class="text-xs text-gray-500">
+            Maintenance
+          </span>
+        </div>
+      </app-card>
+    </div>
+    <div class="col-span-4">
+      <div class="flex justify-end items-center mb-6">
+        <button routerLink="/assets/register" class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M0 0h24v24H0z"/>
+            <path d="M12.5 21H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5M16 3v4M8 3v4M4 11h16M16 19h6M19 16v6"/>
+          </svg>
+          <span>Schedule Maintenance</span>
+        </button>
+      </div>
 
+      <app-card>
+        <div class="py-2 px-4 flex justify-between items-center w-full bg-blue-50">
+          <div class="flex items-center gap-x-2">
+            <div class="flex">
+              <button class="p-2 bg-gray-100 rounded-l">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <path d="m15 6-6 6 6 6"/>
+                </svg>
+              </button>
+              <button class="p-2 bg-gray-100 rounded-r">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <path d="m9 6 6 6-6 6"/>
+                </svg>
+              </button>
+            </div>
+            <button routerLink="/assets/register" class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
+              Today
+            </button>
+          </div>
+          <span class="text-sm font-semibold">12-06-2023</span>
+          <div class="flex rounded items-center">
+            <button routerLink="/assets/register" class="flex items-center bg-blue-900 rounded-l text-white px-4 py-2 gap-x-2">
+              Month
+            </button>
+            <button routerLink="/assets/register" class="flex items-center bg-gray-100 px-4 py-2 gap-x-2">
+              Week
+            </button>
+            <button routerLink="/assets/register" class="flex items-center bg-gray-100 px-4 py-2 gap-x-2">
+              Day
+            </button>
+            <button routerLink="/assets/register" class="flex items-center rounded-r bg-gray-100 px-4 py-2 gap-x-2">
+              List
+            </button>
+          </div>
+        </div>
+        <app-maintenance-mounthly-display />
+      </app-card>
+    </div>
+  </div>
 </app-default-layout>

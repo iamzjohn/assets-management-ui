@@ -22,6 +22,9 @@ import {AssetWarrantyFormComponent} from "./shared/assets/asset-warranty-form/as
 import {SelectComponent} from "./shared/select/select.component";
 import {InputComponent} from "./shared/input/input.component";
 import { AssetsDetailsComponent } from './assets-details/assets-details.component';
+import {
+    MaintenanceMounthlyDisplayComponent
+} from "./maintenance/dates/maintenance-mounthly-display/maintenance-mounthly-display.component";
 
 @NgModule({
   declarations: [
@@ -35,21 +38,22 @@ import { AssetsDetailsComponent } from './assets-details/assets-details.componen
     AssetsCreationComponent,
     AssetsDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    DefaultLayoutComponent,
-    SearchInputComponent,
-    SearchableInputComponent,
-    TableComponent,
-    AssetStatusComponent,
-    DateInputComponent,
-    CardComponent,
-    AssetCreationFormComponent,
-    AssetWarrantyFormComponent,
-    SelectComponent,
-    InputComponent
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        DefaultLayoutComponent,
+        SearchInputComponent,
+        SearchableInputComponent,
+        TableComponent,
+        AssetStatusComponent,
+        DateInputComponent,
+        CardComponent,
+        AssetCreationFormComponent,
+        AssetWarrantyFormComponent,
+        SelectComponent,
+        InputComponent,
+        MaintenanceMounthlyDisplayComponent
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
