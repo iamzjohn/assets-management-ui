@@ -20,8 +20,8 @@ export class AssetService {
   addAsset(asset: any): Observable<Asset> {
     return this.http.post<Asset>(this.baseUrl, asset, this.httpOptions)
   }
-  getOneAsset(id: string): Observable<Asset> {
-    return this.http.get<Asset>(`${this.baseUrl}/${id}`)
+  getOneAsset(id: string): Observable<AssetCreated> {
+    return this.http.get<AssetCreated>(`${this.baseUrl}/${id}`)
   }
 
 }

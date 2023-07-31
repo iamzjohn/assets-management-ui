@@ -11,7 +11,7 @@
       </svg>
       <div class="flex flex-col">
         <span class="text-sm text-gray-500 mb-1">Asset Type:</span>
-        <span class="font-medium">Forklift GF25</span>
+        <span class="font-medium">{{asset.name}} {{asset.model}}</span>
       </div>
     </div>
 
@@ -25,7 +25,7 @@
 
       <div class="flex flex-col">
         <span class="text-sm text-gray-500 mb-1">Model:</span>
-        <span class="font-medium">GF25</span>
+        <span class="font-medium">{{asset.model}}</span>
       </div>
     </div>
 
@@ -39,7 +39,7 @@
       </svg>
       <div class="flex flex-col">
         <span class="text-sm text-gray-500 mb-1">Activity Status:</span>
-        <span class="font-medium">In Storage</span>
+        <span class="font-medium">{{asset.usageStatus}}</span>
       </div>
     </div>
 
@@ -53,7 +53,7 @@
 
       <div class="flex flex-col">
         <span class="text-sm text-gray-500 mb-1">Maintenance Status:</span>
-        <span class="font-medium">Up to date</span>
+        <span class="font-medium">{{asset.maintenanceStatus}}</span>
       </div>
     </div>
   </div>
@@ -61,7 +61,7 @@
   <div class="grid grid-cols-2 gap-4 mt-6">
     <div>
       <h3 class="font-medium text-sm">Store Location:</h3>
-      <span class="text-gray-500 text-sm">Warehouse A</span>
+      <span class="text-gray-500 text-sm">{{asset.location}}</span>
     </div>
     <div>
       <h3 class="font-medium text-sm">Owner:</h3>
@@ -69,11 +69,11 @@
     </div>
     <div>
       <h3 class="font-medium text-sm">Next Preventive Maintenance:</h3>
-      <span class="text-gray-500 text-sm">Port Maputo</span>
+      <span class="text-gray-500 text-sm">12 -06 - 2023</span>
     </div>
     <div class="col-span-2">
       <h3 class="font-medium text-sm">Description:</h3>
-      <span class="text-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sit amet consectetur adipiscing elit. Ac ut consequat semper viverra nam libero. Aliquam nulla facilisi cras fermentum. Mauris sit amet massa vitae tortor. Dignissim sodales ut eu sem integer vitae justo.</span>
+      <span class="text-gray-500 text-sm">{{asset.description}}</span>
     </div>
   </div>
 
@@ -101,23 +101,23 @@
       <div class="flex w-full flex-col divide-y border-b" *ngSwitchCase="'Warranty Information'">
         <div class="grid grid-cols-4 py-2">
           <span>Purchase Date</span>
-          <span>12-06-2023</span>
+          <span>{{asset.warranty[0].dateOfPurchasing}}</span>
         </div>
         <div class="grid grid-cols-4 py-2">
           <span>Purchase Cost</span>
-          <span>43.540.000,00 MZN</span>
+          <span>{{asset.warranty[0].costOfPurchasing}} MZN</span>
         </div>
         <div class="grid grid-cols-4 py-2">
           <span>Current Value</span>
-          <span>22.540.000,00 MZN</span>
+          <span>{{asset.warranty[0].currentValue}} MZN</span>
         </div>
         <div class="grid grid-cols-4 py-2">
-          <span>Depreciation</span>
-          <span>Black</span>
+          <span>Dealer</span>
+          <span>{{asset.warranty[0].dealer}}</span>
         </div>
         <div class="grid grid-cols-4 py-2">
           <span>Warranty expiration date</span>
-          <span>12-06-2023</span>
+          <span>{{asset.warranty[0].expirationDate}}</span>
         </div>
       </div>
       <div class="grid grid-cols-1 gap-y-2" *ngSwitchCase="'Manuals and Documents'">

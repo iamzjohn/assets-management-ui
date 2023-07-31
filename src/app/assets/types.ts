@@ -7,6 +7,7 @@ export type Asset = {
   description: string;
   image: string;
   usageStatus: string;
+  maintenanceStatus: string;
   visibility: string;
   category: string;
   location: string;
@@ -16,7 +17,7 @@ export type Asset = {
   model: string
   capacity: string
   // manufacturer: Manufacturer
-  warranty: Warranty
+  warranty: Warranty[]
   documents: Manual[]
   meters: RegisteredMeter[]
   maintenanceHistory: Maintenance[]
@@ -31,12 +32,13 @@ type Manufacturer = {
 }
 
 type Warranty = {
-  purchaseDate: string;
-  purchaseCost: number;
-  actualCost: number;
+  id: string;
   dealer: string;
-  depreciation: string;
+  serialNumber: number;
+  dateOfPurchasing: string;
   expirationDate: string;
+  costOfPurchasing: number;
+  currentValue: number;
 }
 
 export type Manual = {
