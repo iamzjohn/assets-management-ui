@@ -6,13 +6,16 @@ export type Asset = {
   name: string;
   description: string;
   image: string;
-  status: string;
+  usageStatus: string;
   visibility: string;
   category: string;
   location: string;
   nextPreventiveMaintenance: string;
   owner: string;
-  manufacturer: Manufacturer
+  manufacture: string
+  model: string
+  capacity: string
+  // manufacturer: Manufacturer
   warranty: Warranty
   documents: Manual[]
   meters: RegisteredMeter[]

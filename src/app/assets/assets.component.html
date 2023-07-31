@@ -80,79 +80,23 @@
         </a>
       </div>
       <app-table [headers]="['#', 'Name', 'Model', 'Capacity', 'Location', 'Status', '']" [page]="1" [totalItems]="7">
-        <tr routerLink="/assets/1" class="border-b cursor-pointer hover:bg-gray-100">
-          <td class="pl-4">1</td>
+        <tr *ngFor="let asset of assets" routerLink="/assets/{{asset.id}}/overview" class="border-b cursor-pointer hover:bg-gray-100">
+          <td class="pl-4">{{asset.id}}</td>
           <td>
             <div class="flex items-center gap-x-2 py-2">
               <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
               <div>
-                <h3 class="font-medium">Forklift</h3>
-                <p class="text-gray-500">Manufacturer: Toyota</p>
+                <h3 class="font-medium">{{asset.name}}</h3>
+                <p class="text-gray-500">Manufacturer: {{asset.manufacture}}</p>
               </div>
             </div>
           </td>
-          <td>FG25</td>
-          <td>500 lbs</td>
-          <td>Warehouse A</td>
-          <td class="px-4">
-            <app-asset-status status="success">
-              In Storage
-            </app-asset-status>
-          </td>
-          <td class="pr-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path stroke="none" d="M0 0h24v24H0z"/>
-              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
-              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
-            </svg>
-          </td>
-        </tr>
-        <tr routerLink="/assets/1" class="border-b cursor-pointer hover:bg-gray-100">
-          <td class="pl-4">2</td>
-          <td>
-            <div class="flex items-center gap-x-2 py-2">
-              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
-              <div>
-                <h3 class="font-medium">Payloader</h3>
-                <p class="text-gray-500">Manufacturer: Caterpillar</p>
-              </div>
-            </div>
-          </td>
-          <td>950H</td>
-          <td>3.5 cubic yards</td>
-          <td>Yard B</td>
-          <td class="px-4">
-            <app-asset-status status="warning">
-              In Use
-            </app-asset-status>
-          </td>
-          <td class="pr-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-                 stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-              <path stroke="none" d="M0 0h24v24H0z"/>
-              <path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
-              <path d="M21 12c-2.4 4-5.4 6-9 6-3.6 0-6.6-2-9-6 2.4-4 5.4-6 9-6 3.6 0 6.6 2 9 6"/>
-            </svg>
-          </td>
-        </tr>
-        <tr routerLink="/assets/1" class="border-b cursor-pointer hover:bg-gray-100">
-          <td class="pl-4">3</td>
-          <td>
-            <div class="flex items-center gap-x-2 py-2">
-              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
-              <div>
-                <h3 class="font-medium">Tractor/Tug Master</h3>
-                <p class="text-gray-500">Manufacturer: Karmar</p>
-              </div>
-            </div>
-          </td>
-          <td>TT612</td>
-          <td>-</td>
-          <td>Terminal C</td>
+          <td>{{asset.model}}</td>
+          <td>{{asset.capacity}}</td>
+          <td>{{asset.location}}</td>
           <td class="px-4">
             <app-asset-status status="danger">
-              In Maintenance
+              {{asset.usageStatus}}
             </app-asset-status>
           </td>
           <td class="pr-4">
