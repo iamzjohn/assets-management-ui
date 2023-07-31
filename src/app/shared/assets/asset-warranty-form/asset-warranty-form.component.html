@@ -1,7 +1,7 @@
 <div class="grid grid-cols-2 gap-4">
-  <div class="col-span-2"><app-input label="Serial Number" /> </div>
-  <div class="col-span-2"><app-input label="Dealer" /> </div>
-  <div><app-input label="Date of purchasing" /> </div>
-  <div><app-input label="Cost of purchasing" /> </div>
-  <div><app-input label="Warranty expiration date" /> </div>
+  <div class="col-span-2"><app-input [ngClass]="{'border-0 p-0': true}" label="Serial Number" type="number" (onChange)="setFormData('serialNumber', parseInt($event))" /> </div>
+  <div class="col-span-2"><app-input [ngClass]="{'border-0 p-0': true}" label="Dealer" (onChange)="setFormData('dealer', $event)" /> </div>
+  <div><app-input label="Date of purchasing" [ngClass]="{'border-0 p-0': true}" type="date" (onChange)="setFormData('dateOfPurchasing', $event)" /> </div>
+  <div><app-input label="Cost of purchasing" [ngClass]="{'border-0 p-0': true}" type="number" (onChange)="setFormData('costOfPurchasing', parseInt($event))" /> </div>
+  <div><app-input label="Warranty expiration date" [ngClass]="{'border-0 p-0': true}" type="date" (onChange)="setFormData('exiparationDate', $event)" /> </div>
 </div>

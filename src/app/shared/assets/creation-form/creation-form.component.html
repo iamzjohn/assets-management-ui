@@ -1,18 +1,18 @@
 <div class="grid grid-cols-3 gap-3">
   <div class="col-span-3">
-    <app-input label="Asset Name"/>
+    <app-input label="Asset Name" (onChange)="setFormData('name', $event)"/>
   </div>
   <div>
-    <app-input label="Manufacture"/>
+    <app-input label="Manufacture" (onChange)="setFormData('manufacture', $event)"/>
   </div>
   <div>
-    <app-input label="Model"/>
+    <app-input label="Model" (onChange)="setFormData('model', $event)"/>
   </div>
   <div>
-    <app-input label="Capacity"/>
+    <app-input label="Capacity" (onChange)="setFormData('capacity', $event)"/>
   </div>
   <div class="col-span-3">
-    <app-textarea label="Description"/>
+    <app-textarea label="Description" (onChange)="setFormData('description', $event)"/>
   </div>
   <div class="col-span-3">
     <div class="mb-2">Asset Image</div>
@@ -24,9 +24,10 @@
         <path d="m14 14 1-1c.928-.893 2.072-.893 3 0l3 3"/>
       </svg>
 
-      <span>Drop the image here</span>
+      <span *ngIf="!!file">{{file.name}} was Added</span>
+      <span *ngIf="!file">Drop the image here</span>
 
-      <input type="file" class="w-full h-full absolute opacity-0 cursor-pointer" />
+      <input accept="image/jpeg, image/png" #fileInput (change)="handleFileInput(fileInput.files)" [disabled]="!!file" type="file" [ngClass]="{'cursor-pointer': !file}" class="w-full h-full absolute opacity-0" />
     </div>
   </div>
 </div>

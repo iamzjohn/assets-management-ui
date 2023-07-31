@@ -79,7 +79,7 @@
           <span>Add Asset</span>
         </a>
       </div>
-      <app-table [headers]="['#', 'Name', 'Model', 'Capacity', 'Location', 'Status', '']" [page]="1" [totalItems]="7">
+      <app-table [headers]="['#', 'Name', 'Model', 'Capacity', 'Location', 'Status', '']" [page]="1" [totalItems]="assets.length">
         <tr *ngFor="let asset of assets" routerLink="/assets/{{asset.id}}/overview" class="border-b cursor-pointer hover:bg-gray-100">
           <td class="pl-4">{{asset.id}}</td>
           <td>
@@ -95,7 +95,7 @@
           <td>{{asset.capacity}}</td>
           <td>{{asset.location}}</td>
           <td class="px-4">
-            <app-asset-status status="danger">
+            <app-asset-status status="success">
               {{asset.usageStatus}}
             </app-asset-status>
           </td>

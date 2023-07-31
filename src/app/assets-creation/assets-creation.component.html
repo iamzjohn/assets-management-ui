@@ -3,21 +3,21 @@
     <div class="col-span-4">
       <div class="mb-4">
         <app-card>
-          <app-asset-creation-form/>
+          <app-asset-creation-form (onChange)="setFormData('createAsset', $event)" (onImageUpdate)="setFormData('createImages', $event)" />
         </app-card>
       </div>
 
 
       <div class="mb-4">
         <app-card title="Warranty Information">
-          <app-asset-warranty-form/>
+          <app-asset-warranty-form (onChange)="setFormData('createWarranty', $event)"/>
         </app-card>
       </div>
 
       <div class="w-full flex justify-end">
-        <a routerLink="/assets" class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
+        <button (click)="handleSubmit()" class="flex items-center rounded bg-blue-900 text-white px-4 py-2 gap-x-2">
           Submit
-        </a>
+        </button>
       </div>
     </div>
     <div>
@@ -27,7 +27,7 @@
             <app-select label="Visibility" [options]="visibilityOptions"></app-select>
           </div>
           <div class="mt-4">
-            <app-input label="Category"/>
+            <app-input label="Category" (onChange)="updateCategory($event)" />
           </div>
         </app-card>
       </div>

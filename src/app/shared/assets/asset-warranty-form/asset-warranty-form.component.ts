@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {InputComponent} from "../../input/input.component";
 
@@ -11,5 +11,14 @@ import {InputComponent} from "../../input/input.component";
   ]
 })
 export class AssetWarrantyFormComponent {
+  form = {}
+  @Output() onChange = new EventEmitter<any>();
 
+  setFormData(name: string, value: number | string) {
+    // @ts-ignore
+    this.form[name] = value
+    this.onChange.emit(this.form);
+  }
+
+  protected readonly parseInt = parseInt;
 }
