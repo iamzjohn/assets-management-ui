@@ -84,7 +84,9 @@
           <td class="pl-4">{{asset.id}}</td>
           <td>
             <div class="flex items-center gap-x-2 py-2">
-              <img src="https://placehold.co/600x400" alt="Machine" class="border rounded h-16 w-16 object-cover"/>
+              <object data="https://placehold.co/600x400" type="image/jpeg" class="border rounded h-16 w-16 object-cover">
+                <img src="https://placehold.co/600x400" class="h-full object-cover" alt="{{asset.name}}"/>
+              </object>
               <div>
                 <h3 class="font-medium">{{asset.name}}</h3>
                 <p class="text-gray-500">Manufacturer: {{asset.manufacture}}</p>

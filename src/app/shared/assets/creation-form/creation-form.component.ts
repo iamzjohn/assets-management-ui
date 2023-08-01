@@ -32,8 +32,7 @@ export class AssetCreationFormComponent {
         {
           "fileName": files?.item(0)?.name,
           "fileLocation": "local",
-          "url": "https://placehold.co/600x400"
-          // "url": reader.result
+          "url": reader.result
         }
       ]
       this.onImageUpdate.emit(data);

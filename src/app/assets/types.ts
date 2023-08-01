@@ -5,7 +5,7 @@ import {Maintenance} from "../maintenance/types";
 export type Asset = {
   name: string;
   description: string;
-  image: string;
+  images?: AssetImages[];
   usageStatus: string;
   maintenanceStatus: string;
   visibility: string;
@@ -23,6 +23,13 @@ export type Asset = {
   maintenanceHistory: Maintenance[]
   activities: Activity[]
   jobCard: JobCard
+}
+
+type AssetImages = {
+  id: string
+  fileName: string
+  fileLocation: string
+  url: string
 }
 
 type Manufacturer = {
